@@ -15,7 +15,7 @@ function newProduct() {
         newAlbum: faker.datatype.boolean(),
         image: null
     };
-    return newProduct
+    return newProduct    //push somewhere!!!
 };
 
 

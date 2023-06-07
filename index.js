@@ -1,6 +1,7 @@
 const { writeJSONFile, readJSONFile } = require("./src/helpers")
 const { newProduct } = require("./products")
 const { index, show, create, toDelete, updateItem } = require("./src/controllers")
+const { userProduct, writeCart } = require("./userCart")
 
 let inform = console.log
 
@@ -11,7 +12,7 @@ function run(){
     data.push(newProduct());
     
     writeJSONFile("./data", "data.json", data);
-    
+
     
     inform("TEST APP GENERIC")
     
@@ -26,37 +27,22 @@ switch(action) {
     break;
 
     case "show":
-        const showView = show(data, action);
+        const showView = show(data, "lzS8uvAs");
         inform(showView);
     break;
 
     case "create":
-        const createView = create(data, action, entry);
+        const createView = create(data, "id", "apple");  
         inform(createView);
     break;
 
     case "delete":
-        const deleteView = toDelete(data, action, entry);
+        const deleteView = toDelete(data, "hdQnW8dh"); 
         inform(deleteView)
 
-
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    case "update":
+        const updateView = updateItem(data,"lzS8uvAs", "id", "applen")
+};
 
 }
 
