@@ -342,5 +342,101 @@
     "inStock": true,
     "newAlbum": true,
     "image": null
+  },
+  {
+    "name": "Annette Zieme",
+    "id": "MQfi-dW7",
+    "priceInCents": "$24.00",
+    "inStock": false,
+    "newAlbum": false,
+    "image": null
+  },
+  {
+    "name": "Mattie Champlin PhD",
+    "id": "trKSAuxk",
+    "priceInCents": "$12.00",
+    "inStock": false,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Mrs. Yvette Gerhold",
+    "id": "wMZkgu9L",
+    "priceInCents": "$20.00",
+    "inStock": false,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Monique Flatley",
+    "id": "qQZgSvnU",
+    "priceInCents": "$10.00",
+    "inStock": true,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Edmond Rolfson",
+    "id": "4AosC5SH",
+    "priceInCents": "$8.00",
+    "inStock": false,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Phyllis Willms",
+    "id": "yzDPzHPB",
+    "priceInCents": "$11.00",
+    "inStock": false,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Gladys Pollich",
+    "id": "IxPShacM",
+    "priceInCents": "$14.00",
+    "inStock": false,
+    "newAlbum": false,
+    "image": null
+  },
+  {
+    "name": "Robert Jaskolski",
+    "id": "9BvAN3Va",
+    "priceInCents": "$13.00",
+    "inStock": true,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "James VonRueden",
+    "id": "IRqDKqHB",
+    "priceInCents": "$7.00",
+    "inStock": true,
+    "newAlbum": false,
+    "image": null
+  },
+  {
+    "name": "Mrs. Molly Rippin-Denesik",
+    "id": "D-u6Ll96",
+    "priceInCents": "$7.00",
+    "inStock": true,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Yolanda Romaguera",
+    "id": "m7DIi2OW",
+    "priceInCents": "$25.00",
+    "inStock": true,
+    "newAlbum": false,
+    "image": null
+  },
+  {
+    "name": "Christy Pacocha",
+    "id": "9i8a5e_r",
+    "priceInCents": "$22.00",
+    "inStock": false,
+    "newAlbum": true,
+    "image": null
   }
 ]

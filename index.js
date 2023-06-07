@@ -1,3 +1,4 @@
+const  colors  = require("colors")
 const { writeJSONFile, readJSONFile } = require("./src/helpers")
 const { newProduct } = require("./products")
 const { index, show, create, toDelete, updateItem } = require("./src/controllers")
@@ -23,27 +24,25 @@ switch(action) {
 
     case "index":
         const indexView = index(data);
-        inform(indexView);
+        inform(indexView.rainbow);
     break;
 
-    case "show":
-        const showView = show(data, "lzS8uvAs");
-        inform(showView);
+    case "show":                    //action?
+        const showView = show(data, entry);
+        inform(showView.green);
     break;
 
-    case "create":
-        const createView = create(data, "id", "apple");  
+    case "create":                      // action & entry
+        const createView = create(data, "name", "apple");  
         inform(createView);
     break;
 
-    case "delete":
+    case "delete":                      //action
         const deleteView = toDelete(data, "hdQnW8dh"); 
         inform(deleteView)
 
-    case "update":
-        const updateView = updateItem(data,"lzS8uvAs", "id", "applen")
-};
-
-}
+    case "update":                          //action, entry and other?
+        const updateView = updateItem(data,"lzS8uvAs", "name", "applen")
+}}
 
 run()

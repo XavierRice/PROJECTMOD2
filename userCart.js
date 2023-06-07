@@ -6,8 +6,7 @@ function userProduct() {
     const userProduct = {
 
         name: null,
-
-        id: nanoid(8),
+        id: nanoid(9),
         priceInCents: null,
         inStock: null,
         newAlbum: null,

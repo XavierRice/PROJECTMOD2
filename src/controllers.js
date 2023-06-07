@@ -1,3 +1,5 @@
+const  faker  = require("@faker-js/faker");
+//const  colors = require("./node_modules/colors")
 const { nanoid } = require("nanoid");
 
 const inform = console.log;
@@ -19,12 +21,12 @@ function create(jsonData, key, value) {
     let thingCreator = { };  // creating an empty object. 
     if (jsonData.some((eachThing => eachThing.hasOwnProperty(key)))) {   // using some to see if the key entered is available 
         thingCreator[key] = value // if it is available setting that as a key and value
-   //     thingCreator.id = nanoid(9) // currently trying to add an id to it but having issues 
+       thingCreator.id = nanoid(9) // added an id with 9 digits instead of 8 so it could be located later
     } else {
-        throw " You're entry is unacceptable"   // using throw to return what was given and give a status reply
+        throw colors.red.underline("You're entry is unacceptable")   // using throw to return what was given and give a status reply
     };
-    inform(thingCreator)       // if key accepted showing the "thing" on the console
     jsonData.push(thingCreator)  // pushing into the data array
+    return thingCreator   // returning created item.
 };
 
 function toDelete(jsonData, thingId) {  // function takes two values the data and the id 
@@ -45,7 +47,7 @@ function updateItem(jsonData, thingId, key, entry) { //takes 4 arguements ** may
         if (tobeUpdated[key] !== undefined) {  // checking to see if they key works.
             tobeUpdated[key] = entry
         } else {
-            throw "you're entry is unacceptable"  // using a throw for stretch goals? 
+            throw colors.red.underline("you're entry is unacceptable")  // using a throw for stretch goals? 
         };
         inform("Is now Updated:", tobeUpdated)
     };
