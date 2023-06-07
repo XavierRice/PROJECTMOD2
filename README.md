@@ -1,5 +1,6 @@
 # <em>Mamma Rice's Fancy Fishes</em>
-![anglerfish](https://github.com/XavierRice/PROJECTMOD2/assets/126502714/95f91b1c-31e6-40cc-9206-d44ef93e798d)
+![uglyfish](https://github.com/XavierRice/PROJECTMOD2/assets/126502714/79b7a724-d671-43c2-acef-9b74832e3a25)
+
 # <em>Mamma Rice's Fancy Fishes</em>
                 ##Welcome to the Fancy Fishes app! 🌊🐟 
      This app allows you to manage and showcase your 
