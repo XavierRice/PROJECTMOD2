@@ -1,0 +1,74 @@
+[
+  {
+    "name": "Allen Aufderhar",
+    "id": "zx3k9Uvo",
+    "priceInCents": "$17.00",
+    "inStock": false,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Sophia Grimes",
+    "id": "zIK611rk",
+    "priceInCents": "$7.00",
+    "inStock": true,
+    "newAlbum": false,
+    "image": null
+  },
+  {
+    "name": "Dean Gottlieb",
+    "id": "QRNnpZEH",
+    "priceInCents": "$25.00",
+    "inStock": false,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Ollie McClure PhD",
+    "id": "yisMS3t4",
+    "priceInCents": "$25.00",
+    "inStock": false,
+    "newAlbum": false,
+    "image": null
+  },
+  {
+    "name": "Debra Morissette MD",
+    "id": "co8cO4rF",
+    "priceInCents": "$14.00",
+    "inStock": true,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Roger Hermiston",
+    "id": "IH0rl-12",
+    "priceInCents": "$23.00",
+    "inStock": true,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Kirk Wolff",
+    "id": "Iq7klTN3",
+    "priceInCents": "$16.00",
+    "inStock": true,
+    "newAlbum": true,
+    "image": null
+  },
+  {
+    "name": "Kenneth Rowe",
+    "id": "oTooTVUe",
+    "priceInCents": "$10.00",
+    "inStock": false,
+    "newAlbum": false,
+    "image": null
+  },
+  {
+    "name": "Darlene Lind",
+    "id": "OJoo0IIj",
+    "priceInCents": "$25.00",
+    "inStock": true,
+    "newAlbum": false,
+    "image": null
+  }
+]
