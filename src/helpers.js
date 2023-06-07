@@ -25,7 +25,7 @@ function writeJSONFile(path, fileName, newData){
 
 
 
-//console.log(readJSONFile("./data", "data.json"))
+
 
 
 

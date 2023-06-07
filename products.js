@@ -7,19 +7,19 @@ function newProduct() {
 
     const newProduct = {
 
-        name: faker.person.fullName(),
+        name: faker.animal.fish(),
 
         id: nanoid(8),
         priceInCents: faker.commerce.price({ min: 5, max: 25, dec: 2, symbol: "$" }),
         inStock: faker.datatype.boolean(),
-        newAlbum: faker.datatype.boolean(),
+        delivery: faker.datatype.boolean(),
         image: null
     };
     return newProduct    //push somewhere!!!
 };
 
 
-//console.log(newProduct())
+
 
 
 

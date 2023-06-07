@@ -17,11 +17,12 @@ function show(jsonData, thingId) {
     return thing ? thing.id + " " + thing.name + " " + thing.image : "Item not Found" // using a ternary to return the name/id/image 
 };                                                                 // or returning an error message.
 
-function create(jsonData, key, value) {
+function create(jsonData, key, value, value2) {
     let thingCreator = { };  // creating an empty object. 
     if (jsonData.some((eachThing => eachThing.hasOwnProperty(key)))) {   // using some to see if the key entered is available 
         thingCreator[key] = value // if it is available setting that as a key and value
        thingCreator.id = nanoid(9) // added an id with 9 digits instead of 8 so it could be located later
+       thingCreator.location = value2
     } else {
         throw colors.red.underline("You're entry is unacceptable")   // using throw to return what was given and give a status reply
     };

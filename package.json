@@ -9,8 +9,9 @@
     "show" : "node index.js show",
     "index": "node index.js index",
     "create": "node index.js create",
-    "todelete": "node index.js delete",
-    "toupdate": "node index.js update"
+    "delete": "node index.js delete",
+    "update": "node index.js update",
+    "cart": "node userCart.js"
 
   },
   "keywords": [],

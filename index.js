@@ -10,39 +10,43 @@ let inform = console.log
 
 function run(){
     const data = readJSONFile("./data", "data.json");
-    data.push(newProduct());
+    data.push( newProduct());
     
     writeJSONFile("./data", "data.json", data);
 
+    const newData = readJSONFile("./data", "cart.json")
+    writeCart("./data", "cart.json", newData)
     
     inform("TEST APP GENERIC")
     
     const action = process.argv[2];
     const entry  = process.argv[3];
+    const other = process.argv[4];
+    const other2 = process.argv[5];
 
-switch(action) {
+    switch(action) {
 
     case "index":
         const indexView = index(data);
         inform(indexView.rainbow);
     break;
 
-    case "show":                    //action?
+    case "show":                    
         const showView = show(data, entry);
         inform(showView.green);
     break;
 
-    case "create":                      // action & entry
-        const createView = create(data, "name", "apple");  
+    case "create":                     
+        const createView = create(data, entry , other, other2);  
         inform(createView);
     break;
 
-    case "delete":                      //action
-        const deleteView = toDelete(data, "hdQnW8dh"); 
+    case "delete":                    
+        const deleteView = toDelete(data, entry); 
         inform(deleteView)
 
-    case "update":                          //action, entry and other?
-        const updateView = updateItem(data,"lzS8uvAs", "name", "applen")
+    case "update":                         
+        const updateView = updateItem(data, entry, other , other2)
 }}
 
 run()
