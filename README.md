@@ -18,7 +18,7 @@ Provide the ID number of the fish you want to see. 🐡🔎</p>
 
 ###Add a Fish ➕: 
 <p>Just caught a beauty?! Add a new fish you caught to the index by <strong>npm run create.</strong>
-Enter the name of the fish and the location where it was caught. 🎣🌍</p>
+Enter the name of the fish, how much you want for it, and the location where it was caught. 🎣🌍</p>
 
 
 ###Delete a Fish ❌: 

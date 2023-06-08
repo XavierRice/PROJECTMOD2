@@ -54,6 +54,10 @@ function updateItem(jsonData, thingId, key, entry) { //takes 4 arguements ** may
     };
 };
 
+function deliver(jsonData){
+    const delivery = jsonData.every((eachThing) => {eachThing.location})
+    console.log(delivery)
+}
 
 
 
@@ -70,6 +74,7 @@ module.exports = {
     show,
     create,
     toDelete,
-    updateItem
+    updateItem,
+    deliver,
 
 }

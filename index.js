@@ -1,8 +1,8 @@
 const  colors  = require("colors")
 const { writeJSONFile, readJSONFile } = require("./src/helpers")
 const { newProduct } = require("./products")
-const { index, show, create, toDelete, updateItem } = require("./src/controllers")
-const { userProduct, writeCart } = require("./userCart")
+const { index, show, create, toDelete, updateItem, deliver } = require("./src/controllers")
+const { userFish, writeCart } = require("./userCart")
 
 let inform = console.log
 
@@ -44,9 +44,18 @@ function run(){
     case "delete":                    
         const deleteView = toDelete(data, entry); 
         inform(deleteView)
+    break;
 
     case "update":                         
         const updateView = updateItem(data, entry, other , other2)
+        inform(updateView);
+    break;
+
+    case "deliver":
+        const deliver = delete(data)
+
+
+
 }}
 
 run()

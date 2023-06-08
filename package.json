@@ -11,6 +11,7 @@
     "create": "node index.js create",
     "delete": "node index.js delete",
     "update": "node index.js update",
+    "deliver": "node index.js deliver",
     "cart": "node userCart.js"
 
   },

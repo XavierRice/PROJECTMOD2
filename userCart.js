@@ -3,20 +3,20 @@ const fs =require("fs");
 
 const name = process.argv[2];
 const price = process.argv[3];
-const deliver = process.argv[4]; //boolean
+const location = process.argv[4]; 
 
-function userProduct() {
+function userFish() {
 
-    const userProduct = {
+    const userFish = {
 
-        name: process.argv[2],
+        name: name,
         id: nanoid(10),
-        priceInCents: Number(process.argv[3]),
-        deliver: true,
+        priceInCents: Number(price),
+        location: location,
         
         
     };
-    return userProduct;
+    return userFish;
 };
 
 
@@ -32,12 +32,12 @@ function readCart(path, fileName){
     return cartData ? JSON.parse(cartData): [];
 }
 const newData = [];
-newData.push(userProduct())
+newData.push(userFish())
 writeCart("./data", "cart.json", newData)
 
 module.exports = {
   
-    userProduct,
+    userFish,
     writeCart,
     readCart
 }
