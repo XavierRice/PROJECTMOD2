@@ -1,5 +1,7 @@
+const {readCart} = require("./helpers")
+const userData = readCart("./data", "cart.json")
 const  faker  = require("@faker-js/faker");
-//const  colors = require("./node_modules/colors")
+const  colors = require("colors")
 const { nanoid } = require("nanoid");
 
 const inform = console.log;
@@ -9,12 +11,12 @@ const inform = console.log;
 
 
 function index(jsonData) {
-    return jsonData.map((eachThing) => eachThing.name + " " + eachThing.id + " " + eachThing.priceInCents).join("\n");
+    return jsonData.map((eachThing) => eachThing.name + "   " + eachThing.id + "   " + eachThing.priceInCents).join("\n");
 };   // using .map to return an array of the name, id and price of each item in the jsonList
 
 function show(jsonData, thingId) {
     const thing = jsonData.find((eachThing) => eachThing.id === thingId);  // using .find && the id to location the object.
-    return thing ? thing.id + " " + thing.name + " " + thing.image : "Item not Found" // using a ternary to return the name/id/image 
+    return thing ? thing.id + " " + thing.name + " " + thing.priceInCents : "Item not Found" // using a ternary to return the name/id/image 
 };                                                                 // or returning an error message.
 
 function create(jsonData, key, value, value2) {
@@ -55,17 +57,27 @@ function updateItem(jsonData, thingId, key, entry) { //takes 4 arguements ** may
 };
 
 function deliver(jsonData){
-    const delivery = jsonData.every((eachThing) => {eachThing.location})
-    console.log(delivery)
+    const filtered = jsonData.slice().filter((eachThing) => eachThing.location = true);   // using slice so i won't mutate my data. and filter to exlude all falsey values
+    const delivery = filtered.map(eachThing => eachThing.name + "  " + eachThing.id + "   $" + eachThing.priceInCents);
+    return (delivery.length > 0) ? delivery : "We have no deliveries today!";
+};
+
+function total(userData){
+    let total = 0
+    for ( let fish of userData){
+        let price = fish.split("$")
+      if(price[1] > 0 )
+        total += Number(price[1])
+     
+    }
+    return total.toFixed(2)
+}
+function empty(userData){
+ userData = {}
 }
 
 
-
-
-
-
-
-
+console.log(total(userData))
 
 
 module.exports = {
@@ -76,5 +88,8 @@ module.exports = {
     toDelete,
     updateItem,
     deliver,
+    total,
+    empty
+    
 
 }

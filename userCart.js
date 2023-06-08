@@ -1,17 +1,20 @@
 const { nanoid } = require("nanoid")
 const fs =require("fs");
 
-const name = process.argv[2];
-const price = process.argv[3];
-const location = process.argv[4]; 
 
 function userFish() {
-
+    
+    
+    const name = process.argv[3];
+    const price = process.argv[4];
+    const location = process.argv[5]; 
+   
+   
     const userFish = {
 
         name: name,
         id: nanoid(10),
-        priceInCents: Number(price),
+        priceInCents: price, // considered using Number() to make it a make sure it returned a "number" quality but sometimes gave me null.
         location: location,
         
         
@@ -31,9 +34,13 @@ function readCart(path, fileName){
     console.log(cartData)
     return cartData ? JSON.parse(cartData): [];
 }
-const newData = [];
-newData.push(userFish())
-writeCart("./data", "cart.json", newData)
+
+
+//const newData = [];
+//newData.push(userFish())
+//writeCart("./data", "cart.json", newData)
+
+
 
 module.exports = {
   

@@ -12,7 +12,10 @@
     "delete": "node index.js delete",
     "update": "node index.js update",
     "deliver": "node index.js deliver",
-    "cart": "node userCart.js"
+    "fish": "node index.js fish",
+    "basket": "node index.js basket",
+    "total": "node index.js total",
+    "empty": "node index.js empty"
 
   },
   "keywords": [],

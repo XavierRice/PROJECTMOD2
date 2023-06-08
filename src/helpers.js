@@ -18,6 +18,18 @@ function writeJSONFile(path, fileName, newData){
 };
 
 
+function writeCart(path, fileName, newData){
+    const jsonCart = JSON.stringify(newData, null, 2)
+    return fs.writeFileSync(`${path}/${fileName}`, jsonCart, {encoding: "utf-8"})
+};
+
+
+function readCart(path, fileName){ 
+    const cartData = fs.readFileSync(`${path}/${fileName}`, {encoding: "utf-8"});
+    console.log(cartData)
+    return cartData ? JSON.parse(cartData): [];
+};
+
 
 
 
@@ -46,5 +58,8 @@ function writeJSONFile(path, fileName, newData){
 
 module.exports = {
     readJSONFile,
-    writeJSONFile
+    writeJSONFile,
+    writeCart,
+    readCart
+
 }
