@@ -21,7 +21,7 @@ function newProduct() {
 
 
 
-
+console.log(newProduct())
 
 
 

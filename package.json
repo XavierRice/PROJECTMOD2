@@ -15,7 +15,8 @@
     "fish": "node index.js fish",
     "basket": "node index.js basket",
     "total": "node index.js total",
-    "cancel": "node index.js cancel"
+    "cancel": "node index.js cancel",
+    "discount": "node index.js discount"
 
   },
   "keywords": [],

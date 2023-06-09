@@ -1,7 +1,7 @@
 const  colors  = require("colors")
 const { writeJSONFile, readJSONFile, writeCart, readCart } = require("./src/helpers")
 const { newProduct } = require("./products")
-const { index, show, create, toDelete, updateItem, deliver, total, cancel  } = require("./src/controllers")
+const { index, show, create, toDelete, updateItem, deliver, total, cancel, cheapFish  } = require("./src/controllers")
 const { userFish} = require("./userCart")
 
 let inform = console.log
@@ -77,9 +77,13 @@ function run(){
 
             case "cancel":
             const emptied = cancel()
-            inform(emptied)
+            inform(emptied);
+            break;
 
-
+            case "discount":
+            const discount = cheapFish(data, entry)
+            inform(discount)
+            break;
          }};
 
                 

@@ -37,6 +37,10 @@ and then enter you name(no spaces please!), how much you want for it and where y
 <p> Get detailed information about a specific fish by typing <strong>npm run show fish-id.</strong>
 Provide the ID number of the fish you want to see. 🐡🔎</p> 
 
+## Fishing on a Budget!:
+<p> Get a list of all the available fish that fit your price range! <strong> npm run discount </strong> then just enter your price!</P>
+<strong> CURRENTLY UNAVAILABLE IN US </strong>
+
 ### View your Cart total 💵:
 <p>Get a view of your Cart by type <strong> npm run total </strong>
 

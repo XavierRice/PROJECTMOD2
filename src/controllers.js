@@ -56,27 +56,30 @@ function updateItem(jsonData, thingId, key, entry) { //takes 4 arguements ** may
 
 function deliver(jsonData){
     const filtered = jsonData.slice().filter((eachThing) => eachThing.location = true);   // using slice so i won't mutate my data. and filter to exlude all falsey values
-    const delivery = filtered.map(eachThing => eachThing.name + "  " + eachThing.id + "   $" + eachThing.priceInCents);
-    return (delivery.length > 0) ? delivery : "We have no deliveries today!";
+    const delivery = filtered.map(eachThing => eachThing.name + "  " + eachThing.id + "   $" + eachThing.priceInCents); // using .map to return an array of the names, id's and prices of deliverable fish.
+    return (delivery.length > 0) ? delivery : "We have no deliveries today!";  // a ternary if there an array in deliver, return or toss err. 
 };
 
-function total(userData){
+function total(userData){                               // When I did this function i should have noticed the "mistake" i made by using faker data and ending up with strings for PriceInCents
     let total = 0
     for ( let fish of userData){
-        let price = fish.split("$")
-      if(price[1] > 0 )
+        let price = fish.split("$")                     // I though i was being clever by splitting it by the $ sign and dealing with the number as an indvidual string and calling Number on it.
+      if(price[1] > 0 )                                 // making this line a sloppy but effective line. 
         total += Number(price[1])
     };
     return total.toFixed(2)
 };
 
-
 function cancel(){
-const emptyCart = [];
-const emptyJson = writeCart("./data", "cart.json", emptyCart)
+const emptyCart = [];           // making an empty array for the cart
+const emptyJson = writeCart("./data", "cart.json", emptyCart)  // writting that array into the jsno with a callback function.
 return "Your Cart has been emptied!"
 }
 
+function cheapFish(jsonData, num){
+  const fishList = jsonData.slice().filter((eachFish) => Number(eachFish.priceInCents) < num)
+  return fishList.length > 0 ? fishList : "Dem Fishes need more coins than that honey!"
+}
 
 
 module.exports = {
@@ -88,7 +91,8 @@ module.exports = {
     updateItem,
     deliver,
     total,
-    cancel
+    cancel,
+    cheapFish
     
     
 
