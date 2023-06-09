@@ -1,4 +1,4 @@
-const {readCart} = require("./helpers")
+const {readCart, writeCart} = require("./helpers")
 const userData = readCart("./data", "cart.json")
 const  faker  = require("@faker-js/faker");
 const  colors = require("colors")
@@ -71,13 +71,10 @@ function total(userData){
 };
 
 
-function cancel(userData){
-  const userData = readCart("./data", "cart.json")
-   if(userData.length > 0){
-    userData = [];
-    writeCart("./data", "cart.json", userData)
-   }
-   return "Your Cart has been Emptied"
+function cancel(){
+const emptyCart = [];
+const emptyJson = writeCart("./data", "cart.json", emptyCart)
+return "Your Cart has been emptied!"
 }
 
 

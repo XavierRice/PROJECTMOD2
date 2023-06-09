@@ -76,7 +76,7 @@ function run(){
             break; 
 
             case "cancel":
-            const emptied = cancel(userData)
+            const emptied = cancel()
             inform(emptied)
 
 
