@@ -2,7 +2,7 @@
 ![uglyfish](https://github.com/XavierRice/PROJECTMOD2/assets/126502714/79b7a724-d671-43c2-acef-9b74832e3a25)
 
 # <em>Mamma Rice's Fancy Fishes</em>
-                ##Welcome to the Fancy Fishes app! 🌊🐟 
+     Welcome to the Fancy Fishes app! 🌊🐟 
      This app allows you to manage and showcase your 
      fancy fishes 
      Let's dive right in! 🤿
@@ -13,7 +13,7 @@
 
 ### Add a Fish ➕: 
 <p>Just caught a beauty?! Add a new fish you caught to the index by <strong>npm run create.</strong>
-Enter the name of the fish, how much you want for it, and the location where it was caught. 🎣🌍</p>  <em> C. </em>
+Enter the name of the fish,  and the location where it was caught. 🎣🌍</p>  <em> C. </em>
 
 ### These beauties are for Sale!
 <p>Add fish to your personal cart! Using <strong> npm run basket</strong> and the id number you can take home the fish(es) of your choice!! When done enter <strong> npm run total</total> to see your total!
