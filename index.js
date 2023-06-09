@@ -58,7 +58,7 @@ function run(){
             inform(delivery)
             break;
                 
-            case "fish":
+            case "gofish":
             const newFish = userFish()
             userData.push(newFish)
             inform(newFish)
