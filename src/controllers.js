@@ -8,8 +8,6 @@ const inform = console.log;
 
 
 
-
-
 function index(jsonData) {
     return jsonData.map((eachThing) => eachThing.name + "   " + eachThing.id + "   " + eachThing.priceInCents).join("\n");
 };   // using .map to return an array of the name, id and price of each item in the jsonList
@@ -68,16 +66,20 @@ function total(userData){
         let price = fish.split("$")
       if(price[1] > 0 )
         total += Number(price[1])
-     
-    }
+    };
     return total.toFixed(2)
-}
-function empty(userData){
- userData = {}
-}
+};
 
 
-console.log(total(userData))
+function cancel(userData){
+  const userData = readCart("./data", "cart.json")
+   if(userData.length > 0){
+    userData = [];
+    writeCart("./data", "cart.json", userData)
+   }
+   return "Your Cart has been Emptied"
+}
+
 
 
 module.exports = {
@@ -89,7 +91,8 @@ module.exports = {
     updateItem,
     deliver,
     total,
-    empty
+    cancel
+    
     
 
 }

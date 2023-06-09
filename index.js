@@ -1,7 +1,7 @@
 const  colors  = require("colors")
 const { writeJSONFile, readJSONFile, writeCart, readCart } = require("./src/helpers")
 const { newProduct } = require("./products")
-const { index, show, create, toDelete, updateItem, deliver, total, empty  } = require("./src/controllers")
+const { index, show, create, toDelete, updateItem, deliver, total, cancel  } = require("./src/controllers")
 const { userFish} = require("./userCart")
 
 let inform = console.log
@@ -75,12 +75,12 @@ function run(){
             inform( "Your total Comes To",theTotal)
             break; 
 
-            case "empty":
-            const emptied = empty(userData)
+            case "cancel":
+            const emptied = cancel(userData)
             inform(emptied)
 
 
-                }};
+         }};
 
                 
             

@@ -7,7 +7,7 @@
      fancy fishes 
      Let's dive right in! 🤿
 
-
+//BOOLEAN CONST!!
 
 ###Index of Fishes 📜: 
 <p>See all the fishes caught by typing npm run index. 🐠📝</p>
