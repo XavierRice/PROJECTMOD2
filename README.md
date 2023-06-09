@@ -39,7 +39,7 @@ Provide the ID number of the fish you want to see. 🐡🔎</p>
 
 ## Fishing on a Budget!:
 <p> Get a list of all the available fish that fit your price range! <strong> npm run discount </strong> then just enter your price!</P>
-<strong> CURRENTLY UNAVAILABLE IN US </strong>
+<strong> Now Available </strong>
 
 ### View your Cart total 💵:
 <p>Get a view of your Cart by type <strong> npm run total </strong>
@@ -55,3 +55,11 @@ Simply provide the ID number of the fish you want to delete. 🗑️🐠</p>
 
 ### We now <strong>DELIVER</strong> just type <em>npm run deliver</em>
 <P>Check back to see if they are coming to your specifc neighborhood!
+
+
+
+## This App has been <em><strong> STRETCHED </em></strong> as far as its goal(fish) are concerned!!
+A. Using Color NPM instead of Chalk
+B. the App includes a way to REVIEW fish that cost less than an amount you input.
+C. that App includes a way to review fish that are deliverable. 
+D. this app includes a couple of "throws" for errors. 
