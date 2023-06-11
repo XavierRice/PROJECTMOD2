@@ -33,9 +33,7 @@ function readCart(path, fileName){
 }
 
 
-//const newData = [];
-//newData.push(userFish())
-//writeCart("./data", "cart.json", newData)
+
 
 
 

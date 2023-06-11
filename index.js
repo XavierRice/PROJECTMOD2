@@ -61,7 +61,7 @@ function run(){
             case "gofish":
             const newFish = userFish(entry, other, other2)
             userData.push(newFish)
-            inform(newFish)
+            inform(newFish.bgCyan)
             break;
 
             case "basket":
@@ -74,18 +74,15 @@ function run(){
 
             case "total":
             const theTotal = total(userData)
-            inform( "Your total Comes To",theTotal)
+            inform( "Your total Comes To",theTotal.bgCyan)
             break; 
 
             case "cancel":
             const emptied = cancel()
-            inform(emptied);
+            inform(emptied.bgMagenta);
             break;
 
-            // case "discount":
-            // const discount = cheapFish(data, entry)
-            // inform(discount)
-            // break;
+        
          }};
 
                 
