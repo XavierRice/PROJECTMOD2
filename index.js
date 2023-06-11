@@ -2,7 +2,7 @@ const  colors  = require("colors")
 const { writeJSONFile, readJSONFile, writeCart, readCart } = require("./src/helpers")
 const { newProduct } = require("./products")
 const { index, show, create, toDelete, updateItem, deliver, total, cancel, cheapFish  } = require("./src/controllers")
-const { userFish} = require("./userCart")
+const { userFish } = require("./userCart")
 
 let inform = console.log
 
@@ -30,19 +30,19 @@ function run(){
             inform(indexView.rainbow);
             break;
             
-            case "show":                    
+            case "show":                  //fish-id  
             const showView = show(data, entry);
             inform(showView.green);
             break;
             
-            case "create":      // issues with where it's going                
+            case "create":            //  key  //value of the key and location           
             const createView = create(data, entry , other, other2);  
             data.push(createView)
             writeJSONFile("./data", "data.json", data);
             inform(createView);
             break;
             
-            case "delete":                    
+            case "delete":             // needs work!.       
             const deleteView = toDelete(data, entry); 
             inform(deleteView)
             break;
@@ -59,15 +59,17 @@ function run(){
             break;
                 
             case "gofish":
-            const newFish = userFish()
+            const newFish = userFish(entry, other, other2)
             userData.push(newFish)
             inform(newFish)
             break;
 
             case "basket":
             const theBasket = show(data, entry)
+            theBasket === "Item not Found" ? " Item not found" : 
             userData.push(theBasket)
             writeCart("./data", "cart.json", userData)
+            inform(theBasket.bgBlue)
             break;
 
             case "total":
@@ -80,10 +82,10 @@ function run(){
             inform(emptied);
             break;
 
-            case "discount":
-            const discount = cheapFish(data, entry)
-            inform(discount)
-            break;
+            // case "discount":
+            // const discount = cheapFish(data, entry)
+            // inform(discount)
+            // break;
          }};
 
                 

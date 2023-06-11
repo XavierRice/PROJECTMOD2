@@ -30,12 +30,12 @@ function create(jsonData, key, value, value2) {
     return thingCreator   // returning created item.
 };
 
-function toDelete(jsonData, thingId) {  // function takes two values the data and the id 
+function toDelete(jsonData, thingId) {
+      // function takes two values the data and the id 
     const index = jsonData.findIndex((eachThing) => eachThing.id === thingId);   // using findIndex to A. get an index for slicing and b. to get a negative value if it's not found.
-    console.log(index)
     if (index !== -1) {   // if not -1  ** maybe try/catch?  
         const nowDeleted = jsonData.slice(index, index + 1); // using slice which requires an index. I the slice want to include the index and stop at what immediatly follows it!
-        jsonData.filter((eachThing) => eachThing.id !== thingId) // making sure there are no duplicates by filter anythings that's NOT the id given.
+       jsonData = jsonData.filter((eachThing) => eachThing.id !== thingId) // making sure there are no duplicates by filter anythings that's NOT the id given.
         writeJSONFile("./data", "data.json", jsonData)  // putting that data back into the json file
         inform("Say Good-Bye to:", nowDeleted)   // returning the deleted value for confirmation. 
     } else {
@@ -78,7 +78,7 @@ return "Your Cart has been emptied!"
 }
 
 function cheapFish(jsonData, num){
-  const fishList = jsonData.slice().filter((eachFish) => parseFloat(eachFish.priceInCents) < num)  //used slice to keep from mutating the array. Since my PriceInCents is a string I used parseFloat to convert the string into a floating Point number.
+  const fishList = jsonData.slice().filter((eachFish) => parseInt(eachFish.priceInCents) < num)  //used slice to keep from mutating the array. Since my PriceInCents is a string I used parseFloat to convert the string into a floating Point number. 
 }
 
 

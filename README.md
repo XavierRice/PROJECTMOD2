@@ -53,10 +53,6 @@ Simply provide the ID number of the fish you want to delete. 🗑️🐠</p>
 ### Empty Your Cart🗑️:
 <p>If you need to cancel your items in the cart! Just type <strong> npm run cancel</strong></p>
 
-### We now <strong>DELIVER</strong> just type <em>npm run deliver</em>
-<P>Check back to see if they are coming to your specifc neighborhood!
-
-
 
 ## This App has been <em><strong> STRETCHED </em></strong> as far as its goal(fish) are concerned!!
 A. Using Color NPM instead of Chalk

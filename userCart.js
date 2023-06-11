@@ -2,14 +2,11 @@ const { nanoid } = require("nanoid")
 const fs =require("fs");
 
 
-function userFish() {
+
+
+function userFish(name, price , location) {
     
-    
-    const name = process.argv[3];
-    const price = process.argv[4];
-    const location = process.argv[5]; 
-   
-   
+
     const userFish = {
 
         name: name,

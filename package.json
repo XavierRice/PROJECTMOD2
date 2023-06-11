@@ -12,11 +12,11 @@
     "delete": "node index.js delete",
     "update": "node index.js update",
     "deliver": "node index.js deliver",
-    "fish": "node index.js fish",
     "basket": "node index.js basket",
     "total": "node index.js total",
     "cancel": "node index.js cancel",
-    "discount": "node index.js discount"
+    "discount": "node index.js discount",
+    "gofish": "node index.js gofish"
 
   },
   "keywords": [],
